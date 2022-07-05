@@ -1,5 +1,6 @@
 locals {
-  network_rule_collections = concat(local.network_rule_collections_1, local.network_rule_collections_2)
+  non_prod_extra_collections = local.config.environment == "np" ? local.NonProd_RuleCollection : []
+  network_rule_collections = concat(local.network_rule_collections_1, local.network_rule_collections_2, local.non_prod_extra_collections)
 }
 
 resource "azurerm_firewall_policy" "example" {

@@ -37,3 +37,7 @@ locals {
 # output testdata {
 #     value = module.ipgroupsmodule.ipgroups
 # }
+
+output rulecollections {
+  value = local.network_rule_collections
+}
