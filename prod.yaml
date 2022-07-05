@@ -1,0 +1,2 @@
+environment: prod
+rule_collection_name: "prod_rule_collection"

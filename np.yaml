@@ -1,0 +1,2 @@
+environment: np
+rule_collection_name: "nonprod_rule_collection"

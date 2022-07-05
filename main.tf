@@ -12,9 +12,15 @@ provider "azurerm" {
   features {}
 }
 
+variable "config_name" {
+  type        = string
+  description = "The name of the configuration file to use"
+  default     = "test"
+}
+
 locals {
   collectioname = "Basic-RuleCollection"
-  config_content = file("./config.yaml")
+  config_content  = file("./${var.config_name}.yaml")
   config         = yamldecode(local.config_content)
   default_tags   = {}
 }

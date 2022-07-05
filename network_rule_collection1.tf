@@ -1,7 +1,7 @@
 locals {
   network_rule_collections_1 = [
     {
-      name     = "Basic-RuleCollection1"
+      name     = local.config.rule_collection_name
       priority = 1000
       action   = "Allow"
       rules = [
